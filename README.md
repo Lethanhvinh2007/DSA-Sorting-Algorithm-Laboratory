@@ -1,62 +1,46 @@
-# ĐỒ ÁN MÔN HỌC: CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT
-**Trường:** Đại học Công Nghệ Kỹ thuật TP.HCM (HCMUTE)  
-**Đề tài:** Cài đặt và đánh giá thực nghiệm các thuật toán sắp xếp (Insertion, Selection, Bubble, QuickSort)  
-**Giảng viên hướng dẫn:** Thầy Huỳnh Xuân Phụng  
-**Sinh viên thực hiện:** Lê Thành Vinh - MSSV: 25110075  
-**Lớp / Học kỳ:** HK1 2026-2027  
+# Sorting Algorithm Laboratory
+
+Đồ án môn học: Cấu trúc dữ liệu và Giải thuật (DSA)  
+Trường: Đại học Công Nghệ Kỹ thuật TP.HCM (HCMUTE)  
+Giảng viên hướng dẫn: TS. Huỳnh Xuân Phụng  
+Sinh viên thực hiện: Lê Thành Vinh - MSSV: 25110075  
 
 ---
 
-## 1. Giới thiệu đề tài
-Đề tài thực hiện khảo sát, cài đặt và đánh giá thực nghiệm 4 thuật toán sắp xếp kinh điển:
-1. **Insertion Sort (Sắp xếp chèn)**
-2. **Selection Sort (Sắp xếp chọn)**
-3. **Bubble Sort (Sắp xếp nổi bọt có cờ dừng sớm Early-Exit)**
-4. **QuickSort (Sắp xếp nhanh kết hợp Pivot Median-of-Three và khử đệ quy đuôi Tail-Call Optimization)**
+### 1. Giới thiệu đề tài
+Chương trình thực nghiệm và so sánh các thuật toán sắp xếp kinh điển, được xây dựng trên nền tảng ngôn ngữ C.
 
-Hệ thống theo dõi và đo lường 3 chỉ số chính:
-- Số phép so sánh giữa các phần tử (`comparisons`)
-- Số phép hoán vị / dịch chuyển ô nhớ (`moves`)
-- Thời gian chạy tính bằng mili-giây (`time_taken`)
+Trong giai đoạn đầu (Tuần 1), dự án tập trung hiện thực hóa và kiểm thử tính đúng đắn của 4 thuật toán sắp xếp cốt lõi trên mảng số nguyên:
+
+* `Insertion Sort`: Sắp xếp chèn, duyệt mảng con và trượt các phần tử lớn hơn khóa sang phải để chèn vào vị trí thích hợp.
+* `Selection Sort`: Sắp xếp chọn, quét tìm phần tử nhỏ nhất trong đoạn chưa sắp xếp và hoán vị đúng 1 lần mỗi lượt.
+* `Bubble Sort`: Sắp xếp nổi bọt có gắn cờ `swapped` để phát hiện và dừng sớm (Early-Exit) ngay khi mảng đã có thứ tự.
+* `QuickSort`: Sắp xếp nhanh phân hoạch Lomuto, kết hợp kỹ thuật chọn Pivot Median-of-Three và khử đệ quy đuôi (Tail-Call Optimization) để khống chế Call Stack tối đa O(log N), chống tràn ngăn xếp.
 
 ---
 
-## 2. Kế hoạch thực hiện theo 4 tuần
-- **Tuần 1:** Cài đặt hoàn chỉnh 4 thuật toán sắp xếp cốt lõi, tối ưu QuickSort chống tràn stack, kiểm thử tính đúng đắn trên mảng mẫu.
-- **Tuần 2:** Xây dựng bộ sinh dữ liệu ngẫu nhiên theo 4 phân phối (Random, Nearly-Sorted, Reverse-Sorted, Many-Duplicates) và kiểm thử 6 trường hợp biên.
-- **Tuần 3:** Tiến hành thực nghiệm đo đạc (benchmark) trên các kích thước N = 100, 1.000, 10.000, 100.000; xuất dữ liệu ra file CSV và vẽ biểu đồ phân tích.
-- **Tuần 4:** Hoàn thiện giao diện Menu dòng lệnh (CLI), tổng hợp báo cáo nghiệm thu và đóng gói toàn bộ mã nguồn đồ án.
+### 2. Cấu trúc mã nguồn
+Mã nguồn Tuần 1 được tổ chức tách riêng từng file trong thư mục `4Tuan/Tuan1/`:
+
+* `4Tuan/Tuan1/sorting_algorithms.h`: Khai báo struct `SortStats` (đếm số phép so sánh `comparisons`, số lần hoán vị `moves`, thời gian chạy `time_taken`) và prototype của 4 thuật toán sắp xếp.
+* `4Tuan/Tuan1/sorting_algorithms.c`: Cài đặt chi tiết 4 thuật toán sắp xếp cùng các hàm bổ trợ (`swap`, `medianOfThree`, `partition`, `quickSortHelper`).
+* `4Tuan/Tuan1/main.c`: Khởi tạo mảng số nguyên mẫu `[29, 10, 14, 37, 13, 25, 45, 12]`, chạy kiểm thử 4 thuật toán và in các thông số thống kê ra console.
+* `.gitignore`: Cấu hình loại trừ các file thực thi nhị phân (`*.exe`, `*.o`, `*.zip`) và file tạm khi biên dịch.
 
 ---
 
-## 3. Cấu trúc thư mục dự án
-```
-Sorting Algorithm Laboratory/
-├── 4Tuan/                       # Mã nguồn và báo cáo tiến độ chi tiết từng tuần
-│   ├── Tuan1/                   # Cài đặt 4 thuật toán cơ bản & test mẫu
-│   ├── Tuan2/                   # Bộ sinh dữ liệu & kiểm thử biên
-│   ├── Tuan3/                   # Benchmark đo đạc & xuất CSV
-│   └── Tuan4/                   # Menu CLI & báo cáo hoàn thiện
-├── src/                         # Mã nguồn tổng hợp hoàn chỉnh của đồ án
-├── results/                     # Dữ liệu kết quả thực nghiệm benchmark (CSV, Excel)
-├── docs/                        # Báo cáo đồ án chi tiết
-└── README.md                    # Tài liệu tổng quan dự án
-```
+### 3. Hướng dẫn biên dịch và chạy chương trình
+Yêu cầu môi trường: Cài đặt trình biên dịch GCC (MinGW trên Windows hoặc GCC trên Linux).
 
----
+Thực hiện các lệnh sau trong terminal:
 
-## 4. Hướng dẫn biên dịch và chạy chương trình
-
-### Dành cho tiến độ Tuần 1:
-Vào thư mục `4Tuan/Tuan1/` và chạy bằng lệnh GCC:
 ```bash
+# Di chuyển vào thư mục mã nguồn Tuần 1
+cd 4Tuan/Tuan1
+
+# Biên dịch chương trình với cờ tối ưu -O2 và kiểm tra cảnh báo -Wall
 gcc -O2 -Wall main.c -o main.exe
-.\main.exe
-```
 
-### Dành cho toàn bộ đồ án (Sau khi tích hợp hoàn chỉnh):
-Mở terminal tại thư mục gốc và biên dịch bằng GCC:
-```bash
-gcc -O2 -Wall src/main.c src/sorting_algorithms.c src/data_generator.c src/benchmark.c src/test_cases.c -o sorting_lab.exe
-.\sorting_lab.exe
+# Chạy chương trình kiểm thử Tuần 1
+.\main.exe
 ```
