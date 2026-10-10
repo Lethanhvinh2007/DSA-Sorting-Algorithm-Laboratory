@@ -1,0 +1,24 @@
+# Build Artifacts & Binaries
+*.exe
+*.o
+*.obj
+*.dll
+*.so
+*.dylib
+*.zip
+build/
+bin/
+
+# IDE & Editor Configs
+.vscode/
+.idea/
+*.swp
+*.bak
+
+# Temporary / Scratch files
+*.tmp
+results/*.png
+
+# Private notes & Guides (Not for Github)
+FileKhongPushGithub/
+
