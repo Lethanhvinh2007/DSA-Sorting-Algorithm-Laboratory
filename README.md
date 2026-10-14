@@ -20,27 +20,34 @@ Trong giai đoạn đầu (Tuần 1), dự án tập trung hiện thực hóa v�
 ---
 
 ### 2. Cấu trúc mã nguồn
-Mã nguồn Tuần 1 được tổ chức tách riêng từng file trong thư mục `4Tuan/Tuan1/`:
+Mã nguồn dự án được tổ chức theo từng tuần:
 
-* `4Tuan/Tuan1/sorting_algorithms.h`: Khai báo struct `SortStats` (đếm số phép so sánh `comparisons`, số lần hoán vị `moves`, thời gian chạy `time_taken`) và prototype của 4 thuật toán sắp xếp.
-* `4Tuan/Tuan1/sorting_algorithms.c`: Cài đặt chi tiết 4 thuật toán sắp xếp cùng các hàm bổ trợ (`swap`, `medianOfThree`, `partition`, `quickSortHelper`).
-* `4Tuan/Tuan1/main.c`: Khởi tạo mảng số nguyên mẫu `[29, 10, 14, 37, 13, 25, 45, 12]`, chạy kiểm thử 4 thuật toán và in các thông số thống kê ra console.
-* `.gitignore`: Cấu hình loại trừ các file thực thi nhị phân (`*.exe`, `*.o`, `*.zip`) và file tạm khi biên dịch.
+#### Tuần 1: Cài đặt thuật toán cốt lõi (`4Tuan/Tuan1/`)
+* `sorting_algorithms.h`: Khai báo struct `SortStats` và prototype 4 thuật toán sắp xếp.
+* `sorting_algorithms.c`: Cài đặt chi tiết Insertion Sort, Selection Sort, Bubble Sort (Early-Exit), QuickSort (Median-of-Three, Tail-Call Optimization).
+* `main.c`: Chương trình kiểm thử 4 thuật toán với mảng mẫu $N = 8$.
+
+#### Tuần 2: Bộ sinh kịch bản dữ liệu & Kiểm thử biên (`4Tuan/Tuan2/`)
+* `data_generator.h` & `data_generator.c`: Sinh 4 kịch bản phân bố dữ liệu (Ngẫu nhiên, Đã sắp xếp, Nghịch đảo, Gần như có thứ tự - Fisher-Yates) và các hàm tiện ích (`copyArray`, `printArray`, `isSorted`).
+* `test_cases.h` & `test_cases.c`: Hiện thực kiểm thử mẫu tính tay được $N = 6$ (`[5, 2, 4, 6, 1, 3]`) và kiểm thử 6 trường hợp biên (mảng rỗng, 1 phần tử, đã có thứ tự, giảm dần, trùng lặp toàn bộ, 2 phần tử nghịch đảo).
+* `sorting_algorithms.h` & `sorting_algorithms.c`: Kế thừa mã nguồn thuật toán để kiểm thử độc lập.
+* `main.c`: Chương trình thực thi chạy toàn bộ kiểm thử Tuần 2.
 
 ---
 
 ### 3. Hướng dẫn biên dịch và chạy chương trình
-Yêu cầu môi trường: Cài đặt trình biên dịch GCC (MinGW trên Windows hoặc GCC trên Linux).
+Yêu cầu môi trường: Trình biên dịch GCC (MinGW trên Windows hoặc GCC trên Linux).
 
-Thực hiện các lệnh sau trong terminal:
-
+#### Chạy kiểm thử Tuần 1:
 ```bash
-# Di chuyển vào thư mục mã nguồn Tuần 1
 cd 4Tuan/Tuan1
-
-# Biên dịch chương trình với cờ tối ưu -O2 và kiểm tra cảnh báo -Wall
 gcc -O2 -Wall main.c -o main.exe
+.\main.exe
+```
 
-# Chạy chương trình kiểm thử Tuần 1
+#### Chạy kiểm thử Tuần 2:
+```bash
+cd 4Tuan/Tuan2
+gcc -O2 -Wall main.c -o main.exe
 .\main.exe
 ```
