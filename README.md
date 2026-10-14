@@ -3,7 +3,7 @@
 Đồ án môn học: Cấu trúc dữ liệu và Giải thuật (DSA)  
 Trường: Đại học Công Nghệ Kỹ thuật TP.HCM (HCMUTE)  
 Giảng viên hướng dẫn: TS. Huỳnh Xuân Phụng  
-Sinh viên thực hiện: Lê Thành Vinh - MSSV: 25110075  
+Sinh viên thực hiện: Lê Thanh Vinh - MSSV: 25110075  
 
 ---
 
