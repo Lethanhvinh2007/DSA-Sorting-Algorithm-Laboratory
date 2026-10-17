@@ -1,0 +1,65 @@
+Algorithm,Data_Type,Size,Comparisons,Swaps,Time_ms
+Insertion Sort,Random (Ngẫu nhiên),100,2317,2220,0.0036
+Selection Sort,Random (Ngẫu nhiên),100,4950,94,0.0136
+Bubble Sort,Random (Ngẫu nhiên),100,4935,2220,0.0269
+QuickSort (Med-3),Random (Ngẫu nhiên),100,727,446,0.005
+Insertion Sort,Nearly-Sorted (Gần như sắp xếp),100,286,187,0.0009
+Selection Sort,Nearly-Sorted (Gần như sắp xếp),100,4950,3,0.0167
+Bubble Sort,Nearly-Sorted (Gần như sắp xếp),100,3297,187,0.0074
+QuickSort (Med-3),Nearly-Sorted (Gần như sắp xếp),100,730,205,0.003
+Insertion Sort,Reverse-Sorted (Giảm dần),100,4950,4950,0.009
+Selection Sort,Reverse-Sorted (Giảm dần),100,4950,50,0.0141
+Bubble Sort,Reverse-Sorted (Giảm dần),100,4950,4950,0.0422
+QuickSort (Med-3),Reverse-Sorted (Giảm dần),100,868,420,0.0034
+Insertion Sort,Many-Duplicates (Nhiều trùng lặp),100,2246,2147,0.0029
+Selection Sort,Many-Duplicates (Nhiều trùng lặp),100,4950,81,0.0134
+Bubble Sort,Many-Duplicates (Nhiều trùng lặp),100,4830,2147,0.0239
+QuickSort (Med-3),Many-Duplicates (Nhiều trùng lặp),100,1186,306,0.0036
+Insertion Sort,Random (Ngẫu nhiên),1000,254205,253210,0.1799
+Selection Sort,Random (Ngẫu nhiên),1000,499500,992,1.3504
+Bubble Sort,Random (Ngẫu nhiên),1000,499035,253210,2.9324
+QuickSort (Med-3),Random (Ngẫu nhiên),1000,10758,5468,0.0506
+Insertion Sort,Nearly-Sorted (Gần như sắp xếp),1000,17703,16704,0.0152
+Selection Sort,Nearly-Sorted (Gần như sắp xếp),1000,499500,30,1.3231
+Bubble Sort,Nearly-Sorted (Gần như sắp xếp),1000,494349,16704,0.7474
+QuickSort (Med-3),Nearly-Sorted (Gần như sắp xếp),1000,22958,3650,0.0303
+Insertion Sort,Reverse-Sorted (Giảm dần),1000,499500,499500,0.747
+Selection Sort,Reverse-Sorted (Giảm dần),1000,499500,500,1.3257
+Bubble Sort,Reverse-Sorted (Giảm dần),1000,499500,499500,4.7919
+QuickSort (Med-3),Reverse-Sorted (Giảm dần),1000,15849,6970,0.0366
+Insertion Sort,Many-Duplicates (Nhiều trùng lặp),1000,220142,219144,0.2879
+Selection Sort,Many-Duplicates (Nhiều trùng lặp),1000,499500,860,1.3788
+Bubble Sort,Many-Duplicates (Nhiều trùng lặp),1000,488769,219144,2.278
+QuickSort (Med-3),Many-Duplicates (Nhiều trùng lặp),1000,69134,3799,0.1576
+Insertion Sort,Random (Ngẫu nhiên),10000,25241825,25231834,22.3175
+Selection Sort,Random (Ngẫu nhiên),10000,49995000,9990,147.0567
+Bubble Sort,Random (Ngẫu nhiên),10000,49986999,25231834,264.3017
+QuickSort (Med-3),Random (Ngẫu nhiên),10000,155214,77976,0.6116
+Insertion Sort,Nearly-Sorted (Gần như sắp xếp),10000,1871195,1861196,1.3742
+Selection Sort,Nearly-Sorted (Gần như sắp xếp),10000,49995000,300,141.547
+Bubble Sort,Nearly-Sorted (Gần như sắp xếp),10000,49925994,1861196,80.7973
+QuickSort (Med-3),Nearly-Sorted (Gần như sắp xếp),10000,336362,48360,0.3701
+Insertion Sort,Reverse-Sorted (Giảm dần),10000,49995000,49995000,40.748
+Selection Sort,Reverse-Sorted (Giảm dần),10000,49995000,5000,141.3927
+Bubble Sort,Reverse-Sorted (Giảm dần),10000,49995000,49995000,455.7556
+QuickSort (Med-3),Reverse-Sorted (Giảm dần),10000,234923,99730,0.4369
+Insertion Sort,Many-Duplicates (Nhiều trùng lặp),10000,21855426,21845428,22.1579
+Selection Sort,Many-Duplicates (Nhiều trùng lặp),10000,49995000,8730,142.5617
+Bubble Sort,Many-Duplicates (Nhiều trùng lặp),10000,49236704,21845428,225.3393
+QuickSort (Med-3),Many-Duplicates (Nhiều trùng lặp),10000,6310152,37454,7.2114
+Insertion Sort,Random (Ngẫu nhiên),100000,2506534388,2506434400,2592.8357
+Selection Sort,Random (Ngẫu nhiên),100000,4999950000,99985,12672.8618
+Bubble Sort,Random (Ngẫu nhiên),100000,4999885739,2506434400,38230.1608
+QuickSort (Med-3),Random (Ngẫu nhiên),100000,1960627,956790,10.6637
+Insertion Sort,Nearly-Sorted (Gần như sắp xếp),100000,57820311,57720314,67.1871
+Selection Sort,Nearly-Sorted (Gần như sắp xếp),100000,4999950000,3000,17885.9349
+Bubble Sort,Nearly-Sorted (Gần như sắp xếp),100000,2704207320,57720314,4885.1235
+QuickSort (Med-3),Nearly-Sorted (Gần như sắp xếp),100000,1774162,345604,3.8632
+Insertion Sort,Reverse-Sorted (Giảm dần),100000,4999950000,4999950000,6632.2855
+Selection Sort,Reverse-Sorted (Giảm dần),100000,4999950000,50000,18201.8305
+Bubble Sort,Reverse-Sorted (Giảm dần),100000,4999950000,4999950000,56006.1407
+QuickSort (Med-3),Reverse-Sorted (Giảm dần),100000,3107283,1291664,7.2053
+Insertion Sort,Many-Duplicates (Nhiều trùng lặp),100000,2188760429,2188660431,3061.9784
+Selection Sort,Many-Duplicates (Nhiều trùng lặp),100000,4999950000,87569,15824.6244
+Bubble Sort,Many-Duplicates (Nhiều trùng lặp),100000,4920840669,2188660431,28456.8823
+QuickSort (Med-3),Many-Duplicates (Nhiều trùng lặp),100000,625587347,362581,778.6835

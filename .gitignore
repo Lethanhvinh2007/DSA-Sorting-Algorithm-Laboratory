@@ -6,6 +6,7 @@
 *.so
 *.dylib
 *.zip
+*.bat
 build/
 bin/
 
@@ -16,6 +17,7 @@ bin/
 *.bak
 
 # Temporary / Scratch files
+~$*
 *.tmp
 results/*.png
 
